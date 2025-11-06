@@ -133,7 +133,10 @@ export default function LandingPage() {
             key={item.href}
             icon={item.icon}
             label={item.label}
-            sx={{ color: "white" }}
+            sx={{         color: "white",
+              "&.Mui-selected": {
+                color: "rgb(110, 133, 233)", // ton doré
+              }, }}
           />
         ))}
       </BottomNavigation>

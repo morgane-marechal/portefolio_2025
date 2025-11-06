@@ -79,8 +79,6 @@ body {
 
 
 
-
-
 @keyframes glow-move {
   0% { top: -150px; opacity: 0.6; }
   50% { opacity: 1; }

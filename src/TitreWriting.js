@@ -23,7 +23,6 @@ const TitleWriting =({ text, color='#f5f5f5' })=> {
     visible: {
       opacity: 1,
       y: 1,
-      transition: { type: "tween", stiffness: 180 },
     },
   };
 

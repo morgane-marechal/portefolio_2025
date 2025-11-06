@@ -22,7 +22,7 @@ const Navbar = () => {
           <Button 
             sx={{ 
               color: '#f0eae1',
-              '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.1)' }
+              '&:hover': { backgroundColor: 'rgba(233, 0, 0, 0.1)' }
             }}
           >
             expériences
