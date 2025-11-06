@@ -11,6 +11,14 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Projects = () => {
  
+    const projectsItems = [
+    { label: "Système informatique de gestion des bibliothèques", description: "", techno:[], href: "#about", picture: '', lienGH: '', lienProjet:'' },
+    { label: "Projet IoT de détection de qualité de l'air", description: "", techno:[], href: "#about", picture: '', lienGH: '', lienProjet:'' },
+    { label: "Système de backup de base de données", description: "", href: "#about", techno:[], picture: '', lienGH: '' },
+    { label: "Système informatique de gestion des bibliothèques", description: "", techno:[], href: "#about", picture: '', lienGH: '', lienProjet:'' },
+  ];
+
+
     return (
         <Box>
           <h2>Projets</h2>

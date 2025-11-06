@@ -1,20 +1,24 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
+import ContentWriting from './TitreWriting';
 
 
 const About = () => {
- 
+
+ const presentation =  `Développeuse web passionnée, j'ai mis un point d'honneur dans mon apprentissage à privilégier la POO et certains frameworks javascript et typescript comme React.js et Adonis.js.
+            J'ai travaillé pendant deux ans en entreprise sur un framework interne qui demandait une grande minutie. Durant cette période, j'ai également pu apprécié le travail en équipe et l'entraide, que ce soit dans la recherche, la correction de bugs ou la relecture de code.
+            Cela m'a d'autant motivé à écrire du code propre et maintenable pour le reste de l'équipe.
+            Curieuse, autonome et rigoureuse, j'aime aussi apprendre par moi-même, en ce moment je m'intéresse au monde de l'Internet des objets et je tente de développer une application avec Arduino et React Nativ.
+            Ouverte aux opportunités en télétravail ou en présentiel, je cherche à rejoindre une équipe pour créer des solutions web.`
+
+
     return (
-        <Box>
+        <Box sx={{width: { xs: "100%", md: '60%'},textAlign: 'justify'}} >
           <h2 >A propos</h2>
-          <p>A propos de moi...</p>
+          <p>
+            {presentation}
+          </p>
         </Box>
     );
 }
