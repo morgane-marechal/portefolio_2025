@@ -1,13 +1,10 @@
-import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Grid from '@mui/material/Grid';
 import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
 
 
 const descSIGB = `Application qui sert à gérer les documents disponibles en bibliothèque.
