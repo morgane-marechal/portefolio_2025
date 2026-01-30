@@ -1,4 +1,4 @@
-name: Deploy React to IONOS
+name: Deploy React to IONOS (SFTP)
 
 on:
   push:
@@ -13,23 +13,18 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
       - name: Install dependencies
         run: npm install
 
-      - name: Build React
+      - name: Build React app
         run: npm run build
 
-      - name: Deploy to IONOS via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Upload build via SFTP
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.IONOS_FTP_HOST }}
+          host: access-5018709514.webspace-host.com
           username: ${{ secrets.IONOS_FTP_USER }}
           password: ${{ secrets.IONOS_FTP_PASSWORD }}
-          local-dir: build/
-          server-dir: /public/Portefolio/
-          dangerous-clean-slate: true
+          port: 22
+          source: "build/*"
+          target: "/public/Portefolio"
