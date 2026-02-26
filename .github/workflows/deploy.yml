@@ -19,6 +19,15 @@ jobs:
       - name: Build React app
         run: npm run build
 
+      - name: Add .htaccess for React Router
+        run: |
+          echo "RewriteEngine On
+          RewriteBase /
+          RewriteRule ^index\.html$ - [L]
+          RewriteCond %{REQUEST_FILENAME} !-f
+          RewriteCond %{REQUEST_FILENAME} !-d
+          RewriteRule . /index.html [L]" > build/.htaccess
+
       - name: Upload build via SFTP
         uses: appleboy/scp-action@v0.1.7
         with:
