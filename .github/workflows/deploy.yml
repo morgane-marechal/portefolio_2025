@@ -27,5 +27,5 @@ jobs:
           password: ${{ secrets.IONOS_FTP_PASSWORD }}
           port: 22
           source: "build/*"
-          target: "htdocs/Portefolio/"
+          target: "public/Portefolio/"
           rm: true
