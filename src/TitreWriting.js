@@ -19,7 +19,7 @@ const TitleWriting =({ text, color='#f5f5f5' })=> {
   };
 
   const child = {
-    hidden: { opacity: 0.3 },
+    hidden: { opacity: 0.1 },
     visible: {
       opacity: 1,
       y: 1,
