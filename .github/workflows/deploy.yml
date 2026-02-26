@@ -19,7 +19,7 @@ jobs:
       - name: Build React app
         run: npm run build
 
-      - name: Upload build with SFTP
+      - name: Upload build via SFTP
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.IONOS_FTP_HOST }}
@@ -27,18 +27,5 @@ jobs:
           password: ${{ secrets.IONOS_FTP_PASSWORD }}
           port: 22
           source: "build/*"
-          target: "public/"      
-          rm: true               
-          chmod: "644"           
-          chmod_dir: "755"      
-      
-      - name: Add .htaccess for React Router
-        run: |
-          echo "RewriteEngine On
-          RewriteBase /
-          RewriteRule ^index\.html$ - [L]
-          RewriteCond %{REQUEST_FILENAME} !-f
-          RewriteCond %{REQUEST_FILENAME} !-d
-          RewriteRule . /index.html [L]" > public/.htaccess
-          scp -P 22 public/.htaccess ${{ secrets.IONOS_FTP_USER }}@${{ secrets.IONOS_FTP_HOST }}:public/.htaccess
-
+          target: "public/Portefolio/"
+          rm: true
