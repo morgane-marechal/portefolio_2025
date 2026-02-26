@@ -17,12 +17,17 @@ L'utilisateurs peut se voir attribuer différents rôles et gérer la partie adm
 const descIOT = `Un simple projet afin de récolter les données d'un capteur sur le dioxyde de carbon et de les afficher.
 Ce projet est vraiment dans sa phase de conception. A terme, il permettra la conservation et la valorisation des données via un affichage mobile avec React Native`
 
+const descShop =`Création d'une boutique en ligne en PHP natif avec composer et altorouter.
+ Utilisation d'une architecture Model-View-Controller avec un router et une API REST. Travail en équipe à l'aide de Git, GitHub et un sytème de tickets sur Trello
+`;
 const Projects = () => {
     const projectsItems = [
-    { label: "Système informatique de gestion des bibliothèques", description:descSIGB , techno:["React.js", "Adonis.JS", "PostGres", "Docker"], href: "#about", picture: '', lienGH: [{back :"https://github.com/morgane-marechal/opac_server", front:"https://github.com/morgane-marechal/opac_web"}], lienProjet:'' },
-    { label: "Blog", description:descBlog, techno:["PHP", "Symfony", "Postgres", "Docker"], href: "#about", picture: '', lienGH: 'https://github.com/morgane-marechal/symfony_blog.git', lienProjet:'' },
+    { label: "Système informatique de gestion des bibliothèques", description:descSIGB , techno:["React.js", "Adonis.JS", "PostGres", "Docker", "Material UI", "Github Actions"], href: "#about", picture: '', lienGH: [{back :"https://github.com/morgane-marechal/opac_server", front:"https://github.com/morgane-marechal/opac_web"}], lienProjet:'' },
+    { label: "Blog", description:descBlog, techno:["PHP", "Symfony", "Postgres", "Docker", "Twig", "Boostrap"], href: "#about", picture: '', lienGH: 'https://github.com/morgane-marechal/symfony_blog.git', lienProjet:'' },
     { label: "Projet IoT de détection de qualité de l'air", description:descIOT, techno:["C++", "Arduino IDE", "Firebase", "React Native"], href: "#about", picture: '', lienGH: '', lienProjet:'' },
     { label: "Système de backup de base de données", description: "Une application web pour enregistrer les bases de données et faire des backups régulier pour les conserver", href: "#about", techno:["Fastify.js","React.js", "PostGres", "Docker"], picture: '', lienGH: 'https://github.com/morgane-marechal/dockerisation-safebase' },
+    { label: "Boutique en ligne ", description:descShop, techno:["PHP", "composer", "Javascript", "SQL", "CSS"], href: "#about", picture: '', lienGH: 'https://github.com/morgane-marechal/boutique-en-ligne', lienProjet:'' },
+
   ];
 
 

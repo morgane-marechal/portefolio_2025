@@ -1,16 +1,16 @@
-name: Deploy React to IONOS (SFTP)
+name: Deploy React to IONOS via SFTP
 
 on:
   push:
     branches:
-      - cicd
+      - cicd  
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Install dependencies
@@ -22,9 +22,11 @@ jobs:
       - name: Upload build via SFTP
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: access-5018709514.webspace-host.com
-          username: ${{ secrets.IONOS_FTP_USER }}
-          password: ${{ secrets.IONOS_FTP_PASSWORD }}
+          host: ${{ secrets.FTP_HOST }}        
+          username: ${{ secrets.FTP_USER }}    
+          password: ${{ secrets.FTP_PASSWORD }} 
           port: 22
-          source: "build/*"
-          target: "/public/Portefolio"
+          source: "build/*"                    
+          target: "/public/Portefolio"         
+          rm: true                             
+          strip_components: 0                   
