@@ -18,7 +18,8 @@ const descIOT = `Un simple projet afin de récolter les données d'un capteur su
 Ce projet est vraiment dans sa phase de conception. A terme, il permettra la conservation et la valorisation des données via un affichage mobile avec React Native`
 
 const descShop =`Création d'une boutique en ligne en PHP natif avec composer et altorouter.
- Utilisation d'une architecture Model-View-Controller avec un router et une API REST. Travail en équipe à l'aide de Git, GitHub et un sytème de tickets sur Trello
+ Utilisation d'une architecture Model-View-Controller avec un router et une API REST.
+ Les données sont affichées côtés front avec Javascript. Travail en équipe à l'aide de Git, GitHub et un sytème de tickets sur Trello
 `;
 const Projects = () => {
     const projectsItems = [
