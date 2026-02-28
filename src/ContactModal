@@ -1,0 +1,61 @@
+import {
+  Modal,
+  Box,
+  IconButton
+} from "@mui/material";
+
+import EmailIcon from "@mui/icons-material/Email";
+import { DiGithubBadge } from "react-icons/di";
+
+export default function ContactModal({ open, handleClose }) {
+  return (
+    <Modal open={open} onClose={handleClose}>
+      <Box
+        // sx={{
+        //   position: "absolute",
+        //   top: "50%",
+        //   left: "50%",
+        //   transform: "translate(-50%, -50%)",
+        //   bgcolor: "#1e1e1e",
+        //   borderRadius: 3,
+        //   boxShadow: 24,
+        //   p: 4,
+        //   textAlign: "center",
+        //   minWidth: 300,
+        // }}
+      >
+        {/* <Typography variant="h6" mb={3}>
+          Me contacter
+        </Typography> */}
+
+        {/* <Box sx={{ display: "flex", gap: 4, justifyContent: "center" }}>
+          <IconButton
+            component="a"
+            href="mailto:morgane.marechal12@gmail.com"
+            sx={{
+              color: "rgb(211, 155, 82)",
+              transition: "0.3s",
+              "&:hover": { transform: "scale(1.2)" },
+            }}
+          >
+            <EmailIcon sx={{ fontSize: 40 }} />
+          </IconButton>
+
+          <IconButton
+            component="a"
+            href="https://github.com/morgane-marechal"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              color: "rgb(211, 155, 82)",
+              transition: "0.3s",
+              "&:hover": { transform: "scale(1.2)" },
+            }}
+          >
+            <DiGithubBadge size={40} />
+          </IconButton>
+        </Box> */}
+      </Box>
+    </Modal>
+  );
+}
