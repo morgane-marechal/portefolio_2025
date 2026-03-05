@@ -1,11 +1,14 @@
 import * as React from 'react';
-import { Box, Link } from '@mui/material';
+import { Modal, Box, Typography, Link } from '@mui/material';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import InfoIcon from '@mui/icons-material/Info';
 import WorkIcon from '@mui/icons-material/Work';
 import FolderIcon from '@mui/icons-material/Folder';
-
+import SchoolIcon from '@mui/icons-material/School';
+import EmailButton from './mail';
+import GithubButton from './ghButton'
+import ContactMailIcon from "@mui/icons-material/ContactMail";
 import ProfileCard from './profileCard';
 import Experiences from './experiences';
 import Projects from './projects';
@@ -15,12 +18,14 @@ import LineHorizon from './lineHorizon';
 
 export default function LandingPage() {
   const [value, setValue] = React.useState(0);
+  const [open, setOpen] = React.useState(false); 
 
   const menuItems = [
-    { label: "A propos", href: "#about", icon: <InfoIcon /> },
+    { label: "Profil", href: "#about", icon: <InfoIcon /> },
     { label: "Expériences", href: "#experience", icon: <WorkIcon /> },
-    { label: "Formation", href: "#cursus", icon: <WorkIcon /> },
+    { label: "Formation", href: "#cursus", icon: <SchoolIcon /> },
     { label: "Projets", href: "#projects", icon: <FolderIcon /> },
+
   ];
 
   const handleNavClick = (href, index) => {
@@ -75,7 +80,9 @@ export default function LandingPage() {
               {item.label}
             </Link>
           ))}
+         
         </Box>
+
       </Box>
 
       <Box
@@ -116,7 +123,11 @@ export default function LandingPage() {
 
       <BottomNavigation
         value={value}
-        onChange={(e, newValue) => handleNavClick(menuItems[newValue].href, newValue)}
+        onChange={(e, newValue) => {
+          if (newValue < menuItems.length) {
+            handleNavClick(menuItems[newValue].href, newValue);
+          }
+        }}
         sx={{
           display: { xs: "flex", md: "none" },
           position: "fixed",
@@ -135,11 +146,64 @@ export default function LandingPage() {
             label={item.label}
             sx={{         color: "white",
               "&.Mui-selected": {
-                color: "rgb(110, 133, 233)", // ton doré
+                color: "rgb(211, 155, 82)"
               }, }}
           />
         ))}
+
+      <BottomNavigationAction 
+        label="Contact"
+        icon={<ContactMailIcon />}
+        onClick={() => setOpen(true)}
+        sx={{
+          color: "white",
+          "&.Mui-selected": {
+            color: "rgb(211, 155, 82)"
+          },
+        }}
+      />
       </BottomNavigation>
+
+      <Modal
+        open={open}
+        onClose={() => setOpen(false)}
+      >
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: { xs: "50%", md: 100 },
+            bgcolor: "rgb(30,30,30)",
+            border: "1px solid rgba(255,255,255,0.1)",
+            boxShadow: 24,
+            p: 4,
+            borderRadius: 3,
+            color: "rgb(211, 155, 82)"
+          }}
+        >
+          <Typography variant="h6" mb={2} sx = {{color : "rgb(211, 155, 82)"}}>
+            Me contacter
+          </Typography>
+
+          <Box            
+            sx={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 2,              
+              mt: 2                
+            }}
+          >
+            <EmailButton />           
+            <GithubButton />
+          </Box>
+
+        </Box>
+      </Modal>
     </Box>
   );
 }
@@ -154,3 +218,4 @@ const navLinkStyle = {
 };
 
 const sectionStyle = { mb: 8 };
+

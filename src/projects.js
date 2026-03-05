@@ -34,7 +34,7 @@ const Projects = () => {
 
     return (
         <Box>
-          <h2>Projets</h2>
+          <p>Projets</p>
           {projectsItems.map((project, index) => (
           <Box sx={{width: { xs: "100%", md: '60%'},textAlign: 'justify'}}>
             <Card sx={{ height: "100%", display: "flex", flexDirection: "column", marginTop:1, backgroundColor:"rgb(107, 75, 27, 0.1)"}}>

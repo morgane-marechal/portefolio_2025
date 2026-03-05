@@ -5,7 +5,7 @@ const Cursus = () => {
  
     return (
         <Box sx={{width:{md:'50%', xs:'100%'}}}>
-          <h2 >Formations</h2>
+          <p >Formations</p>
                 <Box sx={{paddingBottom: { xs: "5%", md: "3%"},}}>
                     <Typography variant="xpTitle"> Centre de formation La Plateforme </Typography>                  
                     <p> MARSEILLE - 2023-2025</p>

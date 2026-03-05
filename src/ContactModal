@@ -1,0 +1,35 @@
+import {
+  Modal,
+  Box,
+  IconButton
+} from "@mui/material";
+
+import EmailIcon from "@mui/icons-material/Email";
+import { DiGithubBadge } from "react-icons/di";
+
+export default function ContactModal({ open, handleClose }) {
+  return (
+    <Modal open={open} onClose={handleClose}>
+      <Box
+        sx={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          bgcolor: "#1e1e1e",
+          borderRadius: 3,
+          boxShadow: 24,
+          p: 4,
+          textAlign: "center",
+          minWidth: 300,
+        }}
+      >
+        {/* <Typography variant="h6" mb={3}>
+          Me contacter
+        </Typography> */}
+
+
+      </Box>
+    </Modal>
+  );
+}

@@ -13,7 +13,7 @@ const About = () => {
 
     return (
         <Box sx={{width: { xs: "100%", md: '60%'},textAlign: 'justify'}} >
-          <h2 >A propos</h2>
+          <p >A propos</p>
           <p>
             {presentation}
           </p>

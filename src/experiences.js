@@ -7,7 +7,7 @@ const Experiences = () => {
  
     return (
         <Box>
-            <h2>Expériences</h2>
+            <p>Expériences</p>
                 <Box sx={{paddingBottom: { xs: "5%", md: "3%"},width: { xs: "100%", md: '60%'}}}>
                     <Typography variant="xpTitle"> Développeuse web en Alternance dans l’entreprise Index Education </Typography>                  
                     <p> MARSEILLE - 2023-2025</p>

@@ -8,7 +8,7 @@ const ProfileCard = () => {
  
     return (
         <Box sx={{paddingLeft:{xs:2, md:0}}}>           
-            <Typography sx={{ flex: 1, fontSize:25, marginTop:{ xs: 1, md: 5}}}><TitleWriting text="Portefolio de" /></Typography>
+            <Typography sx={{ flex: 1, fontSize:25, marginTop:{ xs: 1, md: 5}}}><TitleWriting text="Portfolio de" /></Typography>
             <Typography sx={{ flex: 1, fontSize:25, marginTop:{ xs: 1}, marginBottom:{xs:1, md:10}}}><TitleWriting text="Morgane Maréchal" /></Typography>
         </Box>
     );
