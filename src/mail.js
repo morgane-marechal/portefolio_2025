@@ -1,4 +1,4 @@
-import { IconButton, Box } from '@mui/material';
+import { IconButton } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 
 export default function EmailButton() {

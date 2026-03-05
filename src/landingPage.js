@@ -1,14 +1,13 @@
 import * as React from 'react';
-import { Modal, Box, Typography, TextField, Button, Link } from '@mui/material';
+import { Modal, Box, Typography, Link } from '@mui/material';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import InfoIcon from '@mui/icons-material/Info';
 import WorkIcon from '@mui/icons-material/Work';
 import FolderIcon from '@mui/icons-material/Folder';
 import SchoolIcon from '@mui/icons-material/School';
-import { DiGithubBadge } from "react-icons/di";
-import EmailButton from './Mail';
-import GithubButton from './GHButton'
+import EmailButton from './mail';
+import GithubButton from './ghButton'
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import ProfileCard from './profileCard';
 import Experiences from './experiences';
@@ -19,7 +18,7 @@ import LineHorizon from './lineHorizon';
 
 export default function LandingPage() {
   const [value, setValue] = React.useState(0);
-const [open, setOpen] = React.useState(false); 
+  const [open, setOpen] = React.useState(false); 
 
   const menuItems = [
     { label: "Profil", href: "#about", icon: <InfoIcon /> },
@@ -163,8 +162,7 @@ const [open, setOpen] = React.useState(false);
           },
         }}
       />
-    </BottomNavigation>
-
+      </BottomNavigation>
 
       <Modal
         open={open}
