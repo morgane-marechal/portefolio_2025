@@ -80,6 +80,11 @@ export default function LandingPage() {
               {item.label}
             </Link>
           ))}
+
+          <Box>
+            <EmailButton></EmailButton>           
+            <GithubButton></GithubButton>
+          </Box>
          
         </Box>
 
